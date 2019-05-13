@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="499.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoprogramacion.FichaClienteController">
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="737.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoprogramacion.FichaClienteController">
     <stylesheets>
         <URL value="@fichacliente.css" />
     </stylesheets>
@@ -29,51 +29,89 @@
               <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+          <Menu mnemonicParsing="false" text="Ayuda">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#dialogoAyuda" text="Instrucciones" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
-      <TextField fx:id="tfDNI" layoutX="176.0" layoutY="97.0" />
-      <Label layoutX="65.0" layoutY="96.0" text="DNI">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="65.0" layoutY="139.0" text="Nombre">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="65.0" layoutY="183.0" text="Apellidos">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="65.0" layoutY="231.0" text="Telefono">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="65.0" layoutY="278.0" text="FechaNac">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="65.0" layoutY="333.0" text="IdMoto">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <TextField fx:id="tfTelefono" layoutX="176.0" layoutY="232.0" />
-      <TextField fx:id="tfNombre" layoutX="176.0" layoutY="142.0" />
-      <TextField fx:id="tfApellidos" layoutX="176.0" layoutY="184.0" />
-      <TextField fx:id="tfIdMoto" layoutX="176.0" layoutY="334.0" />
-      <Button layoutX="176.0" layoutY="408.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="Siguiente" />
-      <Button layoutX="63.0" layoutY="408.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="Anterior" />
-      <Button layoutX="290.0" layoutY="408.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="70.0" text="Eliminar" />
-      <DatePicker fx:id="dpFechaNacimiento" layoutX="176.0" layoutY="279.0" />
+      <SplitPane dividerPositions="0.6435374149659864" layoutX="-1.0" layoutY="25.0" prefHeight="511.0" prefWidth="737.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="453.0">
+               <children>
+                  <TableView fx:id="tvClientes" layoutX="-2.0" layoutY="65.0" prefHeight="444.0" prefWidth="458.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+                  <ScrollBar layoutX="456.0" layoutY="65.0" orientation="VERTICAL" prefHeight="444.0" prefWidth="15.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="283.0">
+               <children>
+                  <GridPane prefHeight="472.0" prefWidth="286.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="232.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.0" minWidth="0.0" prefWidth="12.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="66.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="94.0" minHeight="3.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="106.0" minHeight="3.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="tfDNI" GridPane.rowIndex="1" />
+                        <TextField fx:id="tfNombre" prefHeight="26.0" prefWidth="201.0" GridPane.rowIndex="3" />
+                        <TextField fx:id="tfApellidos" GridPane.rowIndex="5" />
+                        <Label text="DNI">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Nombre" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Apellidos" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="Telefono" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfTelefono" GridPane.rowIndex="7" />
+                        <Label text="FechaNac" GridPane.rowIndex="8">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dpFechaNacimiento" GridPane.rowIndex="9" />
+                        <Label text="IdMoto" GridPane.rowIndex="10">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="tfIdMoto" prefHeight="10.0" prefWidth="196.0" GridPane.rowIndex="11" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>

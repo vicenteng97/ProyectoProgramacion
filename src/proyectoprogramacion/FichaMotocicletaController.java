@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 /**
@@ -43,10 +44,15 @@ public class FichaMotocicletaController implements Initializable {
     private TextField tfModelo;
     @FXML
     private TextField tfMarca;
+    @FXML
+    private TableView<?> tvMotocicleta;
 
     /**
      * Initializes the controller class.
      */
+    
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

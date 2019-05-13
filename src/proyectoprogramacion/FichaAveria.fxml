@@ -8,18 +8,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoprogramacion.FichaAveriaController">
+<AnchorPane id="AnchorPane" prefHeight="547.0" prefWidth="777.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoprogramacion.FichaAveriaController">
     <stylesheets>
         <URL value="@fichaaveria.css" />
     </stylesheets>
    <children>
-      <TextField fx:id="tfId" layoutX="158.0" layoutY="73.0" />
-      <Label layoutX="53.0" layoutY="71.0" text="Id">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Label>
-      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="700.0">
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="777.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -38,38 +32,78 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Label layoutX="53.0" layoutY="320.0" text="Precio">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Label>
-      <Label layoutX="53.0" layoutY="164.0" text="Fecha">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Label>
-      <Label layoutX="53.0" layoutY="216.0" text="Empleado">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Label>
-      <Label layoutX="53.0" layoutY="266.0" text="Piezas">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Label>
-      <Label layoutX="53.0" layoutY="117.0" text="Nombre">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Label>
-      <TextField fx:id="tfNombre" layoutX="158.0" layoutY="119.0" />
-      <TextField fx:id="tfEmpleado" layoutX="158.0" layoutY="218.0" />
-      <TextField fx:id="tfPiezas" layoutX="158.0" layoutY="268.0" />
-      <TextField fx:id="tfPrecio" layoutX="158.0" layoutY="322.0" />
-      <Button layoutX="53.0" layoutY="382.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="68.0" text="Button" />
-      <Button layoutX="180.0" layoutY="382.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="68.0" text="Button" />
-      <Button layoutX="300.0" layoutY="382.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="68.0" text="Button" />
-      <DatePicker fx:id="dpFecha" layoutX="158.0" layoutY="166.0" />
+      <SplitPane dividerPositions="0.6128048780487805" layoutY="27.0" prefHeight="518.0" prefWidth="777.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="475.0" prefWidth="431.0">
+               <children>
+                  <ScrollBar layoutX="458.0" layoutY="68.0" orientation="VERTICAL" prefHeight="448.0" prefWidth="14.0" />
+                  <TableView fx:id="tablaAverias" layoutY="67.0" prefHeight="448.0" prefWidth="458.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <GridPane prefHeight="515.0" prefWidth="343.0">
+               <children>
+                  <Label text="Id">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nombre" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfNombre" GridPane.rowIndex="3" />
+                  <Label text="Fecha" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dpFecha" GridPane.rowIndex="5" />
+                  <Label text="Empleado" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfEmpleado" GridPane.rowIndex="7" />
+                  <Label text="Piezas" GridPane.rowIndex="8">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfPiezas" GridPane.rowIndex="9" />
+                  <Label text="Precio" GridPane.rowIndex="10">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfPrecio" GridPane.rowIndex="11" />
+                  <TextField fx:id="tfId" GridPane.rowIndex="1" />
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0" minWidth="10.0" prefWidth="264.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="0.0" prefWidth="3.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="184.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="184.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="184.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="255.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="255.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="255.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="255.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="255.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="255.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="255.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="255.0" minHeight="0.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="261.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>

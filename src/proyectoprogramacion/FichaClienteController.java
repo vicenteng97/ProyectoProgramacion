@@ -6,10 +6,15 @@
 package proyectoprogramacion;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 /**
@@ -31,13 +36,34 @@ public class FichaClienteController implements Initializable {
     private TextField tfIdMoto;
     @FXML
     private DatePicker dpFechaNacimiento;
+    @FXML
+    private TableView<?> tvClientes;
 
     /**
      * Initializes the controller class.
      */
+    
+    
+    
+    
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+   public void initialize(URL url, ResourceBundle rb) {
+        
+        
+        
     }    
+
+    @FXML
+    private void dialogoAyuda(ActionEvent event) {
+        Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Ayuda");
+        alert.setHeaderText("Ayuda e instrucciones");
+        alert.setContentText("");
+        Optional<ButtonType>result=alert.showAndWait();
+        if(result.isPresent()&&result.get()==ButtonType.OK){
+            System.out.println("OK");
+        }
+        
+    }
     
 }

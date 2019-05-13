@@ -61,7 +61,7 @@ public class LoginProyectoController implements Initializable {
                 autenticado = true;
                 try{
                         //REALIZAR MENÚ
-                        FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource(""));
+                        FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("MenuUsuarios.fmxl"));
                         Parent root= (Parent)fxmlLoader.load();
                         Stage stage = new Stage();
                         stage.setScene(new Scene(root));
@@ -71,6 +71,9 @@ public class LoginProyectoController implements Initializable {
                     } catch (Exception ex){
                         ex.getMessage();
                         }
+                
+                //Stage stage2 = (Stage) bSignin.getScene().getWindow();
+                //stage2.close();
             }
         }catch(Exception ex){
             ex.getMessage();

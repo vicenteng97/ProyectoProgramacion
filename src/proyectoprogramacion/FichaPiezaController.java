@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 /**
@@ -26,6 +27,8 @@ public class FichaPiezaController implements Initializable {
     private TextField tfProveedor;
     @FXML
     private TextField tfPrecio;
+    @FXML
+    private TableView<?> tvPieza;
 
     /**
      * Initializes the controller class.

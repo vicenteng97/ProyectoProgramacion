@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 /**
@@ -31,6 +32,8 @@ public class FichaEmpleadosController implements Initializable {
     private TextField tfApellidos;
     @FXML
     private TextField tfNombre;
+    @FXML
+    private TableView<?> tvEmpleados;
 
     /**
      * Initializes the controller class.

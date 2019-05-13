@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="703.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="proyectoprogramacion.MenuUsuariosController">
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="703.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoprogramacion.MenuUsuariosController">
     <stylesheets>
         <URL value="@menuusuarios.css" />
     </stylesheets>
@@ -24,12 +25,51 @@
               <MenuItem mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+          <Menu mnemonicParsing="false" text="Ayuda">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem fx:id="ventanaAyuda" mnemonicParsing="false" onAction="#dialogoAyuda" text="Instucciones" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
+      <SplitPane dividerPositions="0.29797979797979796" layoutY="25.0" prefHeight="478.0" prefWidth="695.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Button fx:id="buttonProveedores" layoutX="40.0" layoutY="372.0" mnemonicParsing="false" text="Proveedores">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonAverias" layoutX="62.0" layoutY="238.0" mnemonicParsing="false" text="Averías">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonClientes" layoutX="58.0" layoutY="107.0" mnemonicParsing="false" text="Clientes">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonPiezas" layoutX="65.0" layoutY="302.0" mnemonicParsing="false" text="Piezas">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonEmpleados" layoutX="48.0" layoutY="171.0" mnemonicParsing="false" text="Empleados">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="buttonMotocicletas" layoutX="41.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#clickMotocicletas" text="Motocicletas">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>

@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 /**
@@ -31,6 +32,8 @@ public class FichaAveriaController implements Initializable {
     private TextField tfPrecio;
     @FXML
     private DatePicker dpFecha;
+    @FXML
+    private TableView<?> tablaAverias;
 
     /**
      * Initializes the controller class.
