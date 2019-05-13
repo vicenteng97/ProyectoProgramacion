@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="502.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoprogramacion.FichaAveriaController">
+    <stylesheets>
+        <URL value="@fichaaveria.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="tfId" layoutX="158.0" layoutY="73.0" />
+      <Label layoutX="53.0" layoutY="71.0" text="Id">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="700.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="53.0" layoutY="320.0" text="Precio">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="164.0" text="Fecha">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="216.0" text="Empleado">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="266.0" text="Piezas">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="117.0" text="Nombre">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNombre" layoutX="158.0" layoutY="119.0" />
+      <TextField fx:id="tfEmpleado" layoutX="158.0" layoutY="218.0" />
+      <TextField fx:id="tfPiezas" layoutX="158.0" layoutY="268.0" />
+      <TextField fx:id="tfPrecio" layoutX="158.0" layoutY="322.0" />
+      <Button layoutX="53.0" layoutY="382.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="68.0" text="Button" />
+      <Button layoutX="180.0" layoutY="382.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="68.0" text="Button" />
+      <Button layoutX="300.0" layoutY="382.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="68.0" text="Button" />
+      <DatePicker fx:id="dpFecha" layoutX="158.0" layoutY="166.0" />
+   </children>
+</AnchorPane>

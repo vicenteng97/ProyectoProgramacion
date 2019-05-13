@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoprogramacion.FichaProveedoresController">
+    <stylesheets>
+        <URL value="@fichaproveedores.css" />
+    </stylesheets>
+   <children>
+      <Button layoutX="41.0" layoutY="299.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="66.0" text="Anterior" />
+      <Button layoutX="164.0" layoutY="299.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="66.0" text="Siguiente" />
+      <Button layoutX="292.0" layoutY="299.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="66.0" text="Eliminar" />
+      <TextField fx:id="tfId" layoutX="164.0" layoutY="91.0" />
+      <TextField fx:id="tfNombre" layoutX="164.0" layoutY="175.0" />
+      <Label layoutX="56.0" layoutY="90.0" text="Id">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="174.0" text="Nombre">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

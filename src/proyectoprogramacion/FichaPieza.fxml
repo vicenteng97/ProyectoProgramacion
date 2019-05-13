@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="452.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoprogramacion.FichaPiezaController">
+    <stylesheets>
+        <URL value="@fichapieza.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="tfId" layoutX="164.0" layoutY="67.0" />
+      <TextField fx:id="tfNombre" layoutX="164.0" layoutY="130.0" />
+      <TextField fx:id="tfProveedor" layoutX="164.0" layoutY="194.0" />
+      <TextField fx:id="tfPrecio" layoutX="164.0" layoutY="261.0" />
+      <Label layoutX="54.0" layoutY="65.0" text="Id">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="128.0" text="Nombre">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="192.0" text="Proveedor">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="54.0" layoutY="258.0" text="Precio">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="61.0" layoutY="348.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="68.0" text="Anterior" />
+      <Button layoutX="171.0" layoutY="348.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="68.0" text="Siguiente" />
+      <Button layoutX="279.0" layoutY="348.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="68.0" text="Eliminar" />
+   </children>
+</AnchorPane>

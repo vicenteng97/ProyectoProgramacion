@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="505.0" prefWidth="702.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoprogramacion.FichaEmpleadosController">
+    <stylesheets>
+        <URL value="@fichaempleados.css" />
+    </stylesheets>
+   <children>
+      <DatePicker fx:id="dpFechaNacimiento" layoutX="236.0" layoutY="277.0" />
+      <TextField fx:id="tfDNI" layoutX="236.0" layoutY="90.0" />
+      <Label layoutX="78.0" layoutY="90.0" text="DNI">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="133.0" text="Nombre">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="180.0" text="Apellidos">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="227.0" text="Telefono">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="276.0" text="Fecha Nacimiento">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="323.0" text="Especialidad">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfTelefono" layoutX="236.0" layoutY="227.0" />
+      <TextField fx:id="tfEspecialidad" layoutX="236.0" layoutY="323.0" />
+      <TextField fx:id="tfApellidos" layoutX="236.0" layoutY="180.0" />
+      <TextField fx:id="tfNombre" layoutX="236.0" layoutY="133.0" />
+      <Button layoutX="78.0" layoutY="393.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="68.0" text="Anterior" />
+      <Button layoutX="200.0" layoutY="393.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="68.0" text="Siguiente" />
+      <Button layoutX="323.0" layoutY="393.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="68.0" text="Eliminar" />
+   </children>
+</AnchorPane>
