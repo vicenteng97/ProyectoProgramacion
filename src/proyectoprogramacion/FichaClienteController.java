@@ -43,16 +43,6 @@ public class FichaClienteController implements Initializable {
      * Initializes the controller class.
      */
     
-    
-    
-    
-    @Override
-   public void initialize(URL url, ResourceBundle rb) {
-        
-        
-        
-    }    
-
     @FXML
     private void dialogoAyuda(ActionEvent event) {
         Alert alert=new Alert(Alert.AlertType.CONFIRMATION);
@@ -63,7 +53,16 @@ public class FichaClienteController implements Initializable {
         if(result.isPresent()&&result.get()==ButtonType.OK){
             System.out.println("OK");
         }
+    
+    }
+    
+    
+    @Override
+   public void initialize(URL url, ResourceBundle rb) {     
+    }    
+
+    
         
     }
     
-}
+
