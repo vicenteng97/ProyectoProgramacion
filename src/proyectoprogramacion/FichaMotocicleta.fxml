@@ -8,22 +8,34 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="766.0" prefWidth="699.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoprogramacion.FichaMotocicletaController">
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="827.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoprogramacion.FichaMotocicletaController">
     <stylesheets>
         <URL value="@fichamotocicleta.css" />
     </stylesheets>
    <children>
-      <SplitPane dividerPositions="0.6470588235294118, 0.5" layoutY="27.0" prefHeight="741.0" prefWidth="699.0">
+      <SplitPane dividerPositions="0.6470588235294118, 0.5" layoutY="27.0" prefHeight="741.0" prefWidth="827.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="732.0" prefWidth="432.0">
                <children>
-                  <TableView fx:id="tvMotocicleta" layoutY="77.0" prefHeight="667.0" prefWidth="433.0">
+                  <TableView fx:id="tvMotocicleta" layoutY="77.0" prefHeight="650.0" prefWidth="518.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
+                      <TableColumn fx:id="tcId" prefWidth="75.0" text="Id" />
+                      <TableColumn fx:id="tcMarca" prefWidth="75.0" text="Marca" />
+                        <TableColumn fx:id="tcModelo" prefWidth="75.0" text="Modelo" />
+                        <TableColumn fx:id="tcMatricula" prefWidth="75.0" text="Matricula" />
+                        <TableColumn fx:id="tcTipo" prefWidth="75.0" text="Tipo" />
+                        <TableColumn fx:id="tcCilindrada" prefWidth="75.0" text="Cilindrada" />
+                        <TableColumn fx:id="tcPotencia" prefWidth="75.0" text="Potencia" />
+                        <TableColumn fx:id="tcA2" prefWidth="75.0" text="A2" />
+                        <TableColumn fx:id="tcKilometros" prefWidth="75.0" text="Kilometros" />
+                        <TableColumn fx:id="tcColor" prefWidth="75.0" text="Color" />
+                        <TableColumn fx:id="tcPrecio" prefWidth="75.0" text="Precio" />
+                        <TableColumn fx:id="tcExtras" prefWidth="75.0" text="Extras" />
                     </columns>
                   </TableView>
-                  <ScrollBar layoutX="433.0" layoutY="77.0" orientation="VERTICAL" prefHeight="658.0" prefWidth="16.0" />
+                  <ScrollBar layoutX="517.0" layoutY="81.0" orientation="VERTICAL" prefHeight="658.0" prefWidth="16.0" />
+                  <Button layoutX="428.0" layoutY="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="69.0" text="Añadir" />
+                  <ScrollBar layoutY="724.0" prefHeight="14.0" prefWidth="518.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
@@ -135,7 +147,7 @@
             </GridPane>
         </items>
       </SplitPane>
-      <MenuBar prefHeight="27.0" prefWidth="699.0">
+      <MenuBar prefHeight="27.0" prefWidth="827.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>

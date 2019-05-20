@@ -10,6 +10,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
@@ -46,6 +47,30 @@ public class FichaMotocicletaController implements Initializable {
     private TextField tfMarca;
     @FXML
     private TableView<?> tvMotocicleta;
+    @FXML
+    private TableColumn<?, ?> tcId;
+    @FXML
+    private TableColumn<?, ?> tcMarca;
+    @FXML
+    private TableColumn<?, ?> tcModelo;
+    @FXML
+    private TableColumn<?, ?> tcMatricula;
+    @FXML
+    private TableColumn<?, ?> tcTipo;
+    @FXML
+    private TableColumn<?, ?> tcCilindrada;
+    @FXML
+    private TableColumn<?, ?> tcPotencia;
+    @FXML
+    private TableColumn<?, ?> tcA2;
+    @FXML
+    private TableColumn<?, ?> tcKilometros;
+    @FXML
+    private TableColumn<?, ?> tcColor;
+    @FXML
+    private TableColumn<?, ?> tcPrecio;
+    @FXML
+    private TableColumn<?, ?> tcExtras;
 
     /**
      * Initializes the controller class.

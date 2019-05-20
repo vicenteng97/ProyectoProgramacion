@@ -9,7 +9,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
@@ -34,6 +36,20 @@ public class FichaAveriaController implements Initializable {
     private DatePicker dpFecha;
     @FXML
     private TableView<?> tablaAverias;
+    @FXML
+    private TableColumn<?, ?> tcId;
+    @FXML
+    private TableColumn<?, ?> tcNombre;
+    @FXML
+    private TableColumn<?, ?> tcFecha;
+    @FXML
+    private TableColumn<?, ?> tcEmpleado;
+    @FXML
+    private TableColumn<?, ?> tcPiezas;
+    @FXML
+    private TableColumn<?, ?> tcPrecio;
+    @FXML
+    private Button buttonAñadir;
 
     /**
      * Initializes the controller class.

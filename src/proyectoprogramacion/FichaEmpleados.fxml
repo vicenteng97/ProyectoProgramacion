@@ -19,16 +19,21 @@
                <children>
                   <TableView fx:id="tvEmpleados" layoutY="69.0" prefHeight="415.0" prefWidth="464.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
+                      <TableColumn fx:id="tcDNI" prefWidth="75.0" text="DNI" />
+                      <TableColumn fx:id="tcNombre" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="tcApellidos" prefWidth="75.0" text="Apellidos" />
+                        <TableColumn fx:id="tcTelefono" prefWidth="75.0" text="Telefono" />
+                        <TableColumn fx:id="tcFechaNac" prefWidth="75.0" text="FechaNac" />
+                        <TableColumn fx:id="tcEspecialidad" prefWidth="75.0" text="Especialidad" />
                     </columns>
                   </TableView>
                   <ScrollBar layoutX="460.0" layoutY="69.0" orientation="VERTICAL" prefHeight="415.0" prefWidth="16.0" />
+                  <Button fx:id="buttonAñadir" layoutX="377.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="70.0" text="Añadir" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="484.0" prefWidth="212.0">
                <children>
-                  <GridPane layoutX="6.0" layoutY="32.0" prefHeight="402.0" prefWidth="200.0">
+                  <GridPane layoutY="33.0" prefHeight="402.0" prefWidth="200.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="197.0" minWidth="10.0" prefWidth="178.0" />
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="3.0" prefWidth="22.0" />

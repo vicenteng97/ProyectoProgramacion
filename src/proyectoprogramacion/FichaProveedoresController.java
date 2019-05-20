@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
@@ -25,6 +26,10 @@ public class FichaProveedoresController implements Initializable {
     private TextField tfNombre;
     @FXML
     private TableView<?> tvProveedores;
+    @FXML
+    private TableColumn<?, ?> tcId;
+    @FXML
+    private TableColumn<?, ?> tcNombre;
 
     /**
      * Initializes the controller class.

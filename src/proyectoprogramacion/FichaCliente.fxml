@@ -42,11 +42,16 @@
                <children>
                   <TableView fx:id="tvClientes" layoutX="-2.0" layoutY="65.0" prefHeight="444.0" prefWidth="458.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
+                      <TableColumn fx:id="tcDNI" prefWidth="75.0" text="DNI" />
+                      <TableColumn fx:id="tcNombre" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="tcApellidos" prefWidth="75.0" text="Apellidos" />
+                        <TableColumn fx:id="tcTelefono" prefWidth="75.0" text="Telefono" />
+                        <TableColumn fx:id="tcFechaNac" prefWidth="75.0" text="FechaNac" />
+                        <TableColumn fx:id="tcIdMoto" prefWidth="75.0" text="IdMoto" />
                     </columns>
                   </TableView>
                   <ScrollBar layoutX="456.0" layoutY="65.0" orientation="VERTICAL" prefHeight="444.0" prefWidth="15.0" />
+                  <Button fx:id="buttonAñadir" layoutX="363.0" layoutY="9.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="66.0" text="Añadir" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="283.0">

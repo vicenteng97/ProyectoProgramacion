@@ -19,8 +19,8 @@
                <children>
                   <TableView fx:id="tvProveedores" layoutX="-3.0" layoutY="57.0" prefHeight="319.0" prefWidth="395.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
+                      <TableColumn fx:id="tcId" prefWidth="75.0" text="Id" />
+                      <TableColumn fx:id="tcNombre" prefWidth="75.0" text="Nombre" />
                     </columns>
                   </TableView>
                   <ScrollBar layoutX="384.0" layoutY="57.0" orientation="VERTICAL" prefHeight="319.0" prefWidth="17.0" />
