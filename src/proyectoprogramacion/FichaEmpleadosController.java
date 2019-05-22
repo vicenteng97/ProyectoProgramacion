@@ -5,8 +5,14 @@
  */
 package proyectoprogramacion;
 
+import DAO.Conexion;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -55,7 +61,31 @@ public class FichaEmpleadosController implements Initializable {
      * Initializes the controller class.
      */
     
-    
+    public static void llenarAverias(ObservableList <Empleados> lista) throws SQLException{
+        Conexion conexion=new Conexion();
+        Connection con=conexion.conectar();
+        ResultSet rs;
+        PreparedStatement stmt=null;
+        try{
+            stmt=con.prepareStatement("SELECT * FROM Averia");
+            stmt.executeQuery();
+            rs = stmt.executeQuery();
+            
+            while(rs.next()){
+                ObservableList<Empleados> add = lista.add(new Empleados(
+                        rs.getInt("Dni"),
+                        rs.getString("Nombre"),
+                        rs.getString("Apellidos"),
+                        rs.getInt("Telefono"),
+                        rs.getString("FechaNac"),
+                        rs.getString("Especialidad"),
+                ));
+            }
+            
+        }catch(SQLException ex){
+                System.out.println(ex.getMessage());
+            }
+    }
     
     
     @Override

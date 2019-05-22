@@ -36,32 +36,32 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="buttonProveedores" layoutX="40.0" layoutY="372.0" mnemonicParsing="false" text="Proveedores">
+                  <Button fx:id="buttonProveedores" layoutX="40.0" layoutY="372.0" mnemonicParsing="false" onAction="#clickProveedores" text="Proveedores">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="buttonAverias" layoutX="62.0" layoutY="238.0" mnemonicParsing="false" text="Averías">
+                  <Button fx:id="buttonAverias" layoutX="62.0" layoutY="238.0" mnemonicParsing="false" onAction="#clickAverias" text="Averías">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="buttonClientes" layoutX="58.0" layoutY="107.0" mnemonicParsing="false" text="Clientes">
+                  <Button fx:id="buttonClientes" layoutX="58.0" layoutY="107.0" mnemonicParsing="false" onAction="#clickClientes" text="Clientes">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="buttonPiezas" layoutX="65.0" layoutY="302.0" mnemonicParsing="false" text="Piezas">
+                  <Button fx:id="buttonPiezas" layoutX="65.0" layoutY="302.0" mnemonicParsing="false" onAction="#clickPiezas" text="Piezas">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="buttonEmpleados" layoutX="48.0" layoutY="171.0" mnemonicParsing="false" text="Empleados">
+                  <Button fx:id="buttonEmpleados" layoutX="48.0" layoutY="171.0" mnemonicParsing="false" onAction="#clickEmpleados" text="Empleados">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="buttonMotocicletas" layoutX="41.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#clickMotocicletas" text="Motocicletas">
+                  <Button fx:id="buttonMotocicletas" layoutX="41.0" layoutY="42.0" mnemonicParsing="false" onAction="#clickMotocicletas" onMouseClicked="#clickMotocicletas" text="Motocicletas">
                      <font>
                         <Font size="18.0" />
                      </font>

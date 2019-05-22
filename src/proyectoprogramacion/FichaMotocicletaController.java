@@ -5,8 +5,14 @@
  */
 package proyectoprogramacion;
 
+import DAO.Conexion;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
@@ -48,34 +54,59 @@ public class FichaMotocicletaController implements Initializable {
     @FXML
     private TableView<?> tvMotocicleta;
     @FXML
-    private TableColumn<?, ?> tcId;
+    private TableColumn<Motocicletas, ?> tcId;
     @FXML
-    private TableColumn<?, ?> tcMarca;
+    private TableColumn<Motocicletas, ?> tcMarca;
     @FXML
-    private TableColumn<?, ?> tcModelo;
+    private TableColumn<Motocicletas, ?> tcModelo;
     @FXML
-    private TableColumn<?, ?> tcMatricula;
+    private TableColumn<Motocicletas, ?> tcMatricula;
     @FXML
-    private TableColumn<?, ?> tcTipo;
+    private TableColumn<Motocicletas, ?> tcTipo;
     @FXML
-    private TableColumn<?, ?> tcCilindrada;
+    private TableColumn<Motocicletas, ?> tcCilindrada;
     @FXML
-    private TableColumn<?, ?> tcPotencia;
+    private TableColumn<Motocicletas, ?> tcPotencia;
     @FXML
-    private TableColumn<?, ?> tcA2;
+    private TableColumn<Motocicletas, ?> tcA2;
     @FXML
-    private TableColumn<?, ?> tcKilometros;
+    private TableColumn<Motocicletas, ?> tcKilometros;
     @FXML
-    private TableColumn<?, ?> tcColor;
+    private TableColumn<Motocicletas, ?> tcColor;
     @FXML
-    private TableColumn<?, ?> tcPrecio;
+    private TableColumn<Motocicletas, ?> tcPrecio;
     @FXML
-    private TableColumn<?, ?> tcExtras;
+    private TableColumn<Motocicletas, ?> tcExtras;
 
     /**
      * Initializes the controller class.
      */
     
+         public static void llenarMotocicletas(ObservableList <Motocicletas> lista) throws SQLException{
+        Conexion conexion=new Conexion();
+        Connection con=conexion.conectar();
+        ResultSet rs;
+        PreparedStatement stmt=null;
+        try{
+            stmt=con.prepareStatement("SELECT * FROM Motocicletas");
+            stmt.executeQuery();
+            rs = stmt.executeQuery();
+            
+            while(rs.next()){
+                lista.add(new Motocicleta(
+                       // rs.getInt("Dni"),
+                       // rs.getString("Nombre"),
+                       // rs.getString("Apellidos"),
+                       // rs.getInt("Telefono"),
+                        //rs.getString("FechaNac"), 
+                       // rs.getInt("IdMotocicleta")
+                ));
+            }
+            
+        }catch(SQLException ex){
+                System.out.println(ex.getMessage());
+            }
+    }
     
     
     @Override

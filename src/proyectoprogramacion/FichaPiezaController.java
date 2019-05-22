@@ -5,8 +5,14 @@
  */
 package proyectoprogramacion;
 
+import DAO.Conexion;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -45,6 +51,34 @@ public class FichaPiezaController implements Initializable {
     /**
      * Initializes the controller class.
      */
+    
+     public static void llenarPieza(ObservableList <Pieza> lista) throws SQLException{
+        Conexion conexion=new Conexion();
+        Connection con=conexion.conectar();
+        ResultSet rs;
+        PreparedStatement stmt=null;
+        try{
+            stmt=con.prepareStatement("SELECT * FROM Pieza");
+            stmt.executeQuery();
+            rs = stmt.executeQuery();
+            
+            while(rs.next()){
+                lista.add(new Pieza(
+                       // rs.getInt("Dni"),
+                       // rs.getString("Nombre"),
+                       // rs.getString("Apellidos"),
+                       // rs.getInt("Telefono"),
+                        //rs.getString("FechaNac"), 
+                       // rs.getInt("IdMotocicleta")
+                ));
+            }
+            
+        }catch(SQLException ex){
+                System.out.println(ex.getMessage());
+            }
+    }
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

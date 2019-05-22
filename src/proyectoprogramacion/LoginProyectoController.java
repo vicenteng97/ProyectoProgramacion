@@ -39,6 +39,7 @@ public class LoginProyectoController implements Initializable {
      * Initializes the controller class.
      */
     
+    @FXML
     public void login(){
         String user = idUsuario.getText();
         String password = passUsuario.getText(); 

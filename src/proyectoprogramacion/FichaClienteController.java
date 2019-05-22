@@ -5,9 +5,15 @@
  */
 package proyectoprogramacion;
 
+import DAO.Conexion;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -41,17 +47,17 @@ public class FichaClienteController implements Initializable {
     @FXML
     private TableView<?> tvClientes;
     @FXML
-    private TableColumn<?, ?> tcDNI;
+    private TableColumn<Cliente, DNI> tcDNI;
     @FXML
-    private TableColumn<?, ?> tcNombre;
+    private TableColumn<Cliente, Nombre> tcNombre;
     @FXML
-    private TableColumn<?, ?> tcApellidos;
+    private TableColumn<Cliente, Apellidos> tcApellidos;
     @FXML
-    private TableColumn<?, ?> tcTelefono;
+    private TableColumn<Cliente, Telefono> tcTelefono;
     @FXML
-    private TableColumn<?, ?> tcFechaNac;
+    private TableColumn<Cliente, FechaNac> tcFechaNac;
     @FXML
-    private TableColumn<?, ?> tcIdMoto;
+    private TableColumn<Cliente, IdMoto> tcIdMoto;
     @FXML
     private Button buttonAñadir;
 
@@ -72,6 +78,31 @@ public class FichaClienteController implements Initializable {
     
     }
     
+     public static void llenarEmpleados(ObservableList <Empleados> lista) throws SQLException{
+        Conexion conexion=new Conexion();
+        Connection con=conexion.conectar();
+        ResultSet rs;
+        PreparedStatement stmt=null;
+        try{
+            stmt=con.prepareStatement("SELECT * FROM Empleados");
+            stmt.executeQuery();
+            rs = stmt.executeQuery();
+            
+            while(rs.next()){
+                lista.add(new Empleados(
+                        rs.getInt("Dni"),
+                        rs.getString("Nombre"),
+                        rs.getString("Apellidos"),
+                        rs.getInt("Telefono"),
+                        rs.getString("FechaNac"), 
+                        rs.getInt("IdMotocicleta")
+                ));
+            }
+            
+        }catch(SQLException ex){
+                System.out.println(ex.getMessage());
+            }
+    }
     
     @Override
    public void initialize(URL url, ResourceBundle rb) {     

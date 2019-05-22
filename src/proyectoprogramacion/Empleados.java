@@ -61,6 +61,15 @@ public class Empleados {
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
+
+    public Empleados(String nombre, String apellidos, String especialidad, Fecha fechaNac, int dni, int telefono) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.especialidad = especialidad;
+        this.fechaNac = fechaNac;
+        this.dni = dni;
+        this.telefono = telefono;
+    }
     
     
             

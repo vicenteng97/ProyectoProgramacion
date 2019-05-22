@@ -13,7 +13,7 @@
         <URL value="@loginproyecto.css" />
     </stylesheets>
    <children>
-      <Button fx:id="botonLogin" layoutX="270.0" layoutY="202.0" mnemonicParsing="false" text="Iniciar sesion">
+      <Button fx:id="botonLogin" layoutX="270.0" layoutY="202.0" mnemonicParsing="false" onAction="#login" text="Iniciar sesion">
          <font>
             <Font size="13.0" />
          </font></Button>
